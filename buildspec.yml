@@ -11,3 +11,7 @@ artifacts:
       - styles/main.css
       - images/*
       - css/*
+      - js/*
+      - fonts/*
+      - browserconfig.xml
+      
