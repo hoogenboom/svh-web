@@ -18,7 +18,7 @@ def lambda_handler(event, context):
 
         if job:
             for artifact in job["data"]["inputArtifacts"]:
-                if artifact["name"]=="MyAppBuild":
+                if artifact["name"]=="BuildArtif":
                     location = artifact["location"]["s3Location"]
 
         print "Building SVH Web from " + str(location)
@@ -35,7 +35,7 @@ def lambda_handler(event, context):
             for nm in myzip.namelist():
                 obj = myzip.open(nm)
                 prod_bucket.upload_fileobj(obj, nm,
-                 ExtraArgs={'ContentType':  mimetypes.guess_type(nm)[0]})
+                 ExtraArgs={'ContentType': mimetypes.guess_type(nm)[0]})
                 prod_bucket.Object(nm).Acl().put(ACL='public-read')
 
         print 'Job Done'
