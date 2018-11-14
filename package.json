@@ -1,19 +1,38 @@
 {
-  "name": "24-hour-video",
+  "name": "svh-web-app",
   "version": "1.0.0",
-  "description": "The 24 Hour Video Website",
+  "description": "The SVH Web App",
   "local-web-server": {
     "port": 8100,
     "forbid": "*.json"
   },
   "scripts": {
     "start": "ws",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch"
   },
-  "author": "Peter Sbarski",
-  "license": "BSD-2-Clause",
+  "author": "Wes Hoogenboom",
+  "license": "ISC",
   "devDependencies": {
-    "local-web-server": "^1.1.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
+    "local-web-server": "^1.1.0",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoogenboom/svh-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoogenboom/svh-web/issues"
+  },
+  "homepage": "https://github.com/hoogenboom/svh-web#readme"
 }
